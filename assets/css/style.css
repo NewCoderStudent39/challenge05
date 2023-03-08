@@ -1,0 +1,150 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: slategray;
+    color: white;
+}
+
+header {
+    padding: 20px 10px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+header h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+}
+
+#add-task-form {
+    display: flex;
+}
+
+#planner-tasks .task .content {
+    flex: 1 1 0%;
+}
+
+input, button {
+    appearance: none;
+    border: none;
+    outline: none;
+    background: none;
+}
+
+#add-task-input {
+    flex: 1 1 0%;
+    background-color: lightgrey;
+    padding: 10px;
+    border-radius: 20px;
+    margin-right: 10px;
+    color: black;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#add-task-input::placeholder {
+    color: black;
+}
+
+#new-task-submission {
+    color: teal;
+    font-size: 20px;
+    font-weight: bold;
+    background-image: linear-gradient(to right, teal, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    cursor: pointer;
+    transition: 0.4s;
+}
+
+#new-task-submission:hover {
+    font-size: 25px;
+    color: green;
+    background-image: linear-gradient(to right, green, turquoise);
+}
+
+main {
+    flex: 1 1 0%;
+    padding: 20px 10px;
+    max-width: 800px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.planner-task-list {
+    padding: 10px;
+}
+
+.planner-task-list h2 {
+    font-size: 30px;
+    font-weight: bold;
+    color: black;
+    margin-bottom: 15px;
+}
+
+#planner-tasks .task {
+    display: flex;
+    justify-content: space-between;
+    background-color: darkgray;
+    padding: 10px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+#planner-tasks .task .content .text {
+    color: white;
+    font-size: 15px;
+    width: 100%;
+    display: block;
+    transition: 0.4s;
+}
+
+#planner-tasks .task .content .text:not(:read-only) {
+    color: teal;
+}
+
+#planner-tasks .task .buttons {
+    display: flex;
+    margin: 0 -5px;
+}
+
+.task .buttons button {
+    cursor: pointer;
+    margin: 0 5px;
+    font-size: 15px;
+    font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.4s;
+}
+
+.task .buttons button:hover {
+    font-size: 20px;
+    color: red;
+    background-image: linear-gradient(to right, red, orange);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .buttons .edit-task  {
+    color: teal;
+    background-image: linear-gradient(to right, teal, blue);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.task .buttons .delete-task {
+    color: green;
+    background-image: linear-gradient(to right,green, yellow);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
